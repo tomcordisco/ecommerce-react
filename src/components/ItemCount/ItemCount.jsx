@@ -1,26 +1,41 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 
-const ItemCount = () => {
+const ItemCount = ({stock, minimum}) => {
+    const [contador, setContador] = useState(minimum);
+    const [color, setColor] = useState("black");
 
-    const [contador, setContador] = useState(1);
+    useEffect(() => {
+        if (contador > 5) {
+            setColor("red");
+        } else {
+            setColor("black");
+        }
+    }, [contador]);
 
-    let maximoStock = 10;
+    const addToCart = () => {
+        console.log("Se agregó al carrito");
+    };
+
     const incrementar = () => {
-        if (contador < maximoStock) { setContador(contador + 1); }
-    }
+        if (contador < stock) {
+            setContador(contador + 1);
+        }
+    };
 
     const decrementar = () => {
-        if(contador > 1) {setContador(contador - 1); }
-    }
+        if (contador > minimum) {
+            setContador(contador - 1);
+        }
+    };
 
     return (
         <div>
-            <button onClick={ decrementar }> - </button>
-            <p> {contador} </p>
-            <button onClick={ incrementar }> + </button> 
+            <button onClick={decrementar}>-</button>
+            <p>{contador}</p>
+            <button onClick={incrementar}>+</button>
+            <button onClick={addToCart} id="product-button" style={{color: color}}>Add to cart</button>
         </div>
-    )
-}
+    );
+};
 
-export default ItemCount
+export default ItemCount;

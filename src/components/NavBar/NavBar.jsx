@@ -1,6 +1,7 @@
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
+import Categories from '../Categories/Categories'
 
 const NavBar = ({nombre, precio}) => {
     return (
@@ -8,9 +9,7 @@ const NavBar = ({nombre, precio}) => {
             <h1>Helton</h1>
             <nav>
                 <ul>
-                    <li>Remeras</li>
-                    <li>Hoodies</li>
-                    <li>Pantalones</li>
+                    <Categories />
                 </ul>
             </nav>
             <CartWidget/>
