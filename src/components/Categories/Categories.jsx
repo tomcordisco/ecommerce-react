@@ -15,9 +15,9 @@ const Categories = () => {
         <div>
             <button onClick={()=> handleClick("Remeras")}>Remeras</button>
             <button onClick={() => handleClick("Hoodies")}>Hoodies</button>
-            <button onClick={() => handleClick("Hoodies")}>Hoodies</button>
+            <button onClick={() => handleClick("Hoodies")}>Pantalones</button>
             
-        </div>
+        </div> 
     )
 }
 

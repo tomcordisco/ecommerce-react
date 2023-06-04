@@ -1,0 +1,12 @@
+.itemContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .itemContainer {
+        flex-direction: column;
+    }
+}
