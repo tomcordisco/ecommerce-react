@@ -1,15 +1,35 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react';
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
-import Categories from '../Categories/Categories'
+import { Link, NavLink } from 'react-router-dom'
 
-const NavBar = ({nombre, precio}) => {
+const NavBar = () => {
+    const [categoria, setCategoria] = useState("Helton Store");
+
+    useEffect( () => {
+        document.title = categoria;
+    }, [categoria]);
+
+    const handleClick = (categoria) => {
+        setCategoria(categoria);
+    }
     return (
         <header>
-            <h1>Helton</h1>
+            <Link to={"/"} >
+                <h1>Helton</h1>
+            </Link>
+            
             <nav>
                 <ul>
-                    <Categories />
+                    <li>
+                        <NavLink onClick={()=> handleClick("Remeras")} to={"/categoria/1"} > Remeras </NavLink>
+                    </li>
+                    <li>
+                        <NavLink  to={"/categoria/2"} > Hoodies </NavLink>
+                    </li>
+                    <li>
+                        <NavLink onClick={()=> handleClick("Pantalones")} to={"/categoria/3"} > Pantalones </NavLink>
+                    </li>
                 </ul>
             </nav>
             <CartWidget/>
