@@ -1,8 +1,8 @@
 const productos = [
-    {id: "1", idCategoria: "1", nombre: "REMERA ESCUADRÓN GALÁCTICO [ BLANCO ]", precio: 12900, img: "./img/remera-savetheworld-02-blanco.webp"},
-    {id: "2", idCategoria: "2", nombre: "REMERA ESCUADRÓN GALÁCTICO [ NEGRO ]", precio: 12900, img: "./img/remera-savetheworld-02-negro.webp"},
-    {id: "3", idCategoria: "3", nombre: "REMERA HOSPITAL PLANETARIO [ BLANCO ]", precio: 12900, img: "./img/luxo-741-hosp-plan-blanco.webp"},
-    {id: "4", idCategoria: "3", nombre: "REMERA HOSPITAL PLANETARIO [ NEGRO ]", precio: 12900, img: "./img/luxo-741-hosp-plan-negro.webp"}
+    {id: "1", idCategoria: "1", nombre: "REMERA ESCUADRÓN GALÁCTICO [ BLANCO ]", precio: 12900, img: "./img/remera-savetheworld-02-blanco.webp", stock: 10},
+    {id: "2", idCategoria: "2", nombre: "REMERA ESCUADRÓN GALÁCTICO [ NEGRO ]", precio: 12900, img: "./img/remera-savetheworld-02-negro.webp", stock: 6},
+    {id: "3", idCategoria: "3", nombre: "REMERA HOSPITAL PLANETARIO [ BLANCO ]", precio: 12900, img: "./img/luxo-741-hosp-plan-blanco.webp", stock: 5},
+    {id: "4", idCategoria: "3", nombre: "REMERA HOSPITAL PLANETARIO [ NEGRO ]", precio: 12900, img: "./img/luxo-741-hosp-plan-negro.webp", stock: 15}
 
 ]
 
