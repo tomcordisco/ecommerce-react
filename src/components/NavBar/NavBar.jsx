@@ -25,10 +25,10 @@ const NavBar = () => {
                         <NavLink onClick={()=> handleClick("Remeras")} to={"/categoria/1"} > Remeras </NavLink>
                     </li>
                     <li>
-                        <NavLink  to={"/categoria/2"} > Hoodies </NavLink>
+                        <NavLink  to={"/categoria/3"} > Hoodies </NavLink>
                     </li>
                     <li>
-                        <NavLink onClick={()=> handleClick("Pantalones")} to={"/categoria/3"} > Pantalones </NavLink>
+                        <NavLink onClick={()=> handleClick("Pantalones")} to={"/categoria/2"} > Pantalones </NavLink>
                     </li>
                 </ul>
             </nav>
