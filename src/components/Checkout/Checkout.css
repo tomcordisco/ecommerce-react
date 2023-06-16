@@ -1,0 +1,110 @@
+/* MOBILE FIRST */
+.containerCheckOut{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerCheckOut h2 {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.containerCheckOut .datos{
+    display: flex;
+    flex-direction: column;
+}
+
+.containerCheckOut .productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.containerCheckOut .total{
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.containerCheckOut form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerCheckOut .form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.containerCheckOut .form-group label {
+    align-self: flex-start;
+    font-size: 16px;
+}
+
+.containerCheckOut .form-group input {
+    border-radius: 0;
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+.containerCheckOut .finalizar {
+    cursor: pointer;
+    background-color: black;
+    color: #ffffff;
+    font-weight: 900;
+    border: 1px solid #cdcdcd;
+    border-radius: 2%;
+    padding: 1rem;
+    transition: all 0.5s;
+}
+
+.containerCheckOut .finalizar:hover {
+    background-color: #a3a3a3;
+    color: black;
+}
+
+.containerCheckOut .compraFinalizada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .containerCheckOut{
+        justify-content: flex-start;
+    }
+    .containerCheckOut .productos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+    }
+    .containerCheckOut .datos{
+        align-self: flex-start;
+    }
+    .containerCheckOut h2{
+        align-self: flex-start;
+    }
+
+    .containerCheckOut form{
+        align-self: flex-start;
+        width: 500px;
+    }
+    .containerCheckOut .finalizar{
+        width: 500px;
+    }
+    .compraFinalizada{
+        padding: 1rem 0;
+        align-self: flex-start;
+    }
+}

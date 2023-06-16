@@ -68,34 +68,29 @@ const Checkout = () => {
                 setError("Se produjo un error al actualizar el stock de los productos.");
             })
 
-        // addDoc(collection(db, "orders"), order)
-        // .then(docRef => {
-        //     setOrderId(docRef.id);
-        //     deleteCart();
-        // })
-        // .catch(error => {
-        //     setError("Se produjo un error al crear la orden.");
-        // });
-
     }
 
     return (
 
 
-        <div>
+        <div className="containerCheckOut">
             <h2>Checkout</h2>
-            <form onSubmit={ handleForm }>
+            <div className="datos">
                 {cart.map(producto => (
-                <div>
-                    <p>
-                        { producto.item.nombre} x {producto.quantity}
-                    </p>
-                    <p> Precio ${producto.item.precio} </p>
-                </div>
+                    <div className="productos">
+                        <p>
+                            { producto.item.nombre} x {producto.quantity}
+                        </p>
+                        <p> ${producto.item.precio} </p>
+                    </div>
                 ))}
-                <p>Total: {total}</p>
-                <hr />
-                
+                <p className="total">Total: {total}</p>
+            </div>
+            
+            <hr />
+
+
+            <form onSubmit={ handleForm }>
                 <div className="form-group">
                     <label htmlFor=""> Nombre </label>
                     <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
@@ -121,15 +116,18 @@ const Checkout = () => {
                     <input type="email" value={emailConfirmation} onChange={(e) => setEmailConfirmation(e.target.value)} />
                 </div>
 
-                {error && <p style={{color:"red"}}> {error} </p>}
+                {error && <p className="error" style={{color:"red"}}> {error} </p>}
                 
-                <button type="submit"> Finalizar Compra </button>
+                <button className="finalizar" type="submit"> Finalizar Compra </button>
             </form>
 
             {
 
                 orderId && (
-                    <strong>¡Gracias por tu compra! Tu número de orden es {orderId}.</strong>
+                    <div className="compraFinalizada">
+                        <strong>¡Gracias por tu compra! Tu número de orden es {orderId}.</strong>
+                    </div>
+                    
                 )
 
             }
@@ -138,4 +136,4 @@ const Checkout = () => {
     )
 }
 
-export default Checkout
+export default Checkout;

@@ -1,0 +1,43 @@
+/* MOBILE FIRST */
+
+.cartItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.5rem;
+}
+
+.cartItem h4 {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.cartItem p {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.cartItem button {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.cartItem button {
+    cursor: pointer;
+    width: 100%;
+    background-color: black;
+    color: #ffffff;
+    font-weight: 900;
+    border: 1px solid #cdcdcd;
+    border-radius: 2%;
+    padding: 0.7rem;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.cartItem button:hover {
+    background-color: #a3a3a3;
+    color: black;
+}
+

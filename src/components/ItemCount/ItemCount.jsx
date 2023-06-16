@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ItemCount.css';
 
 const ItemCount = ({ minimum, stock, functionAddToCart }) => {
     console.log("stock: " +  stock);
@@ -18,12 +19,12 @@ const ItemCount = ({ minimum, stock, functionAddToCart }) => {
 
     return (
         <>
-            <div>
-                <button onClick={decrementar}>-</button>
-                <p>Contador: {contador}</p>
-                <button onClick={incrementar}>+</button>
+            <div className='container-count'>
+                <button className='minus' onClick={decrementar}>-</button>
+                <div className='contador'><p>{contador}</p></div>
+                <button className='plus' onClick={incrementar}>+</button>
             </div>
-            <button onClick={() => functionAddToCart(contador)} id="product-button">Add to cart</button>
+            <button className='add' onClick={() => functionAddToCart(contador)} id="product-button">Add to cart</button>
         </>
     );
 };

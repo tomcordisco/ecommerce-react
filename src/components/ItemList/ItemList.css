@@ -1,12 +1,14 @@
 .itemContainer {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-@media (max-width: 768px) {
+/* DESKTOP */
+@media (min-width: 768px) {
     .itemContainer {
-        flex-direction: column;
+        flex-direction: row;
     }
 }

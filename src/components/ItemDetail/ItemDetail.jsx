@@ -10,25 +10,35 @@ const ItemDetail = ({ id, nombre, precio, img, stock }) => {
     const [addToCart, setAddToCart] = useState(0);
 
     // Traigo el context de cart
-    const {addProduct} = useContext(CartContext);
+    const { addProduct } = useContext(CartContext);
 
     // Funcion que maneja la cantidad de productos en el carrito:
     const handleQuantity = (quantity) => {
         setAddToCart(quantity);
-        
-        const item = {id, nombre, precio};
+
+        const item = { id, nombre, precio };
         addProduct(item, quantity);
     };
 
     return (
         <div className={`contenedorItem item-id-${id}`}>
-            <h2>{nombre}</h2>
-            <h3>{precio}</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eos dolore deserunt doloremque? Impedit praesentium voluptatum deserunt nihil quas consequuntur unde asperiores. Corporis, perspiciatis? Commodi totam expedita at a distinctio?</p>
-            <img src={img} alt={nombre} />
-            {
-                addToCart > 0 ? (<Link to="/cart"> Terminar Compra </Link>) : (<ItemCount minimum={1} stock={stock} functionAddToCart={handleQuantity} />)
-            }
+            <div className='img'>
+                <img src={img} alt={nombre} />
+            </div>
+            
+            <div className='contenido'>
+                <h2>{nombre}</h2>
+                <h3>${precio}</h3>
+                
+                {stock === 0 ? (
+                    <p className='sinStock'>Sin stock</p>
+                ) : addToCart > 0 ? (
+                    <Link className='finish' to="/cart"><p>Terminar Compra</p></Link>
+                ) : (
+                    <ItemCount minimum={1} stock={stock} functionAddToCart={handleQuantity} />
+                )}
+            </div>
+            
         </div>
     );
 };

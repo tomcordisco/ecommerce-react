@@ -1,62 +1,67 @@
+/* MOBILE FIRST */
 .cardProducto {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: none;
+    flex-wrap: wrap;
     padding: 1rem;
     margin: 1rem;
-    width: calc(33.33% - 15rempx);
-    /* Ancho ajustado para 3 productos por fila */
     box-sizing: border-box;
 }
 
 .imgProducto {
-    width: 400px;
+    width: 250px;
     object-fit: contain;
 }
 
 .cardProducto h3 {
     color: #000;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 900;
     margin: 0.3rem;
+    text-align: center;
 }
 
 .cardProducto p {
     color: #000;
     font-size: 16px;
+    font-weight: 900;
     margin: 0.3rem;
+    text-align: center;
 }
 
-.cardProducto button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    font-size: 14px;
+.cardProducto .verDetalles {
     cursor: pointer;
+    background-color: black;
+    color: #ffffff;
+    font-weight: 900;
+    border: 1px solid #cdcdcd;
+    border-radius: 2%;
+    padding: 0.7rem;
+    font-size: 14px;
+    text-decoration: none;
     transition: all 0.5s;
 }
 
-.cardProducto button:hover {
-    background-color: #e8e8e8;
-    color: #000000;
+.cardProducto .verDetalles:hover {
+    background-color: #a3a3a3;
+    color: black;
 }
 
-
-
-
-
-@media (max-width: 768px) {
-    
+@media (min-width: 576px) {
+    .cardProducto h3 {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .cardProducto p {
+        font-size: 20px;
+    }
 }
 
-@media (max-width: 576px) {
-    
-    h3 {
-        color: #000;
-        font-size: 12px;
-        margin-bottom: 8px;
+@media (min-width: 768px) {
+    .imgProducto {
+        width: 400px;
     }
 }

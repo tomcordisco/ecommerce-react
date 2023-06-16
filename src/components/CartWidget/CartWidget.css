@@ -1,3 +1,8 @@
 .imgCarrito {
-    width: 4rem;
+    width: 2rem;
+    margin: 5px;
+}
+.cartWidget .number{
+    color: black;
+    text-decoration: none;
 }
